@@ -35,7 +35,7 @@ class App extends Component {
   };
 
   GameGetSearch = GameQuery => {
-    const url = `http://127.0.0.1:5000/games/${GameQuery}`;
+    const url = `https://msd-ass2-bichengxu.herokuapp.com/games/${GameQuery}`;
     fetch(url)
       .then(response => response.json(),
       error => console.log('An error occurred.', error))
@@ -60,7 +60,7 @@ class App extends Component {
   };
 
   GuessGetSearch = GuessQuery => {
-    const url = `http://127.0.0.1:5000/guesses/${GuessQuery}`;
+    const url = `https://msd-ass2-bichengxu.herokuapp.com/guesses/${GuessQuery}`;
     fetch(url)
       .then(response => response.json(),
       error => console.log('An error occurred.', error))
@@ -84,7 +84,7 @@ class App extends Component {
   };
 
   GamePostSearch = GamePostQuery => {
-    const url = `http://127.0.0.1:5000/games/${GamePostQuery}`;
+    const url = `https://msd-ass2-bichengxu.herokuapp.com/games/${GamePostQuery}`;
     fetch(url, {
       method: 'post',
       body: {'game_id': GamePostQuery},
@@ -115,7 +115,7 @@ class App extends Component {
   GuessPostSearch = GuessPostQuery => {
     var id = GuessPostQuery.split(",")[0];
     var guess = GuessPostQuery.split(",")[1];
-    const url = `http://127.0.0.1:5000/guesses/${id}?letter=${guess}`;
+    const url = `https://msd-ass2-bichengxu.herokuapp.com/guesses/${id}?letter=${guess}`;
     fetch(url, {
       method: 'post',
       body: {'game_id': GuessPostQuery},
